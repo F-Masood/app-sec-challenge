@@ -85,6 +85,11 @@
 * Local WAF
 * Captcha 
 * Package scanning / Pipeline scanning to find CVEs
+* Use an API or custom-dict to block most common keywords for PWD e.g.:
+    * Xero
+    * Newzealand
+    * Kiwi 
+    * etc. etc. etc. 
 
 #### References / Sources used
 * Google, ChatGPT, Github and Flask documentation
