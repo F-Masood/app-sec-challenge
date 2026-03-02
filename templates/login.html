@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="utf-8">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, msg in messages %}
+          <li><strong>{{ category }}:</strong> {{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <label>Email</label><br>
+    {{ form.email(size=40, placeholder="name@xero.com") }}<br><br>
+
+    <label>Password</label><br>
+    {{ form.password(size=40) }}<br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p><a href="{{ url_for('forgot_password') }}">Forgot password?</a></p>
+
+  <hr>
+  <p>Or sign in with Microsoft:</p>
+  <p><a href="{{ url_for('entra_login') }}">Sign in with Entra ID (SSO)</a></p>
+</body>
+</html>

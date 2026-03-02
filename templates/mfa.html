@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>MFA</title></head>
+<body>
+  <h1>MFA Verification</h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, msg in messages %}
+          <li><strong>{{ category }}:</strong> {{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <label>Authenticator code</label><br>
+    {{ form.totp(size=12, placeholder="123456") }}<br><br>
+    <button type="submit">Verify</button>
+  </form>
+</body>
+</html>

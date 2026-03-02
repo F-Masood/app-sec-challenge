@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dev - Create User</title>
+</head>
+<body>
+  <h1>Dev - Create User</h1>
+  <p>This page is protected by HTTP Basic auth.</p>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, msg in messages %}
+          <li><strong>{{ category }}:</strong> {{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post">
+    {{ form.hidden_tag() }}
+
+    <label>Email</label><br>
+    {{ form.email(size=40, placeholder="name@xero.com") }}<br><br>
+
+    <label>Password</label><br>
+    {{ form.password(size=40, placeholder="12+ chars") }}<br><br>
+
+    <label>{{ form.is_admin() }} Admin user?</label><br>
+    <label>{{ form.enable_mfa() }} Enable MFA (TOTP)?</label><br><br>
+
+    <button type="submit">Create user</button>
+  </form>
+
+  <p><a href="{{ url_for('login') }}">Back to login</a></p>
+</body>
+</html>
