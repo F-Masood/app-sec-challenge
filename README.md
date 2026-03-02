@@ -73,9 +73,9 @@
     * Log all activity with timestamp
 ##### Method (B) - SSO (Google, Microsoft or Okta etc.)
 * Pros:
-    * No need to have separate logic / DBs for Authentication part.
+    * No need to have separate logic / DBs for Authentication part
 * Cons:
-    * The SSO policies will be effective, so granular control e.g. Password policy, Session timeout etc. can’t be controlled. 
+    * The SSO policies will be effective, so granular control e.g. Password policy, Session timeout etc. can’t be controlled
 
 #####  Other safeguards to implement in future
 * IP-allow listing:
