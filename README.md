@@ -80,6 +80,7 @@
     * The SSO policies will be effective, so granular control e.g. Password policy, Session timeout etc. can’t be controlled
 
 #####  Other safeguards to implement in future
+* Host header injection
 * IP-allow listing:
     * Behind VPN or Azure CAP to access this portal to reduce attack surface
 * Local WAF
@@ -90,6 +91,11 @@
     * Newzealand
     * Kiwi 
     * etc. etc. etc. 
+
+#####  Other functionality
+* Beautfiy web
+
+
 
 #### References / Sources used
 * Google, ChatGPT, Github and Flask documentation
