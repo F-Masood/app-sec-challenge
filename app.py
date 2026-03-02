@@ -56,6 +56,8 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_talisman import Talisman
 
+from datetime import timedelta
+
 
 # ----------------------------
 # Config
@@ -81,6 +83,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SESSION_COOKIE_HTTPONLY"] = True
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["SESSION_COOKIE_SECURE"] = False  # set True in production behind HTTPS
+
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 
 # MSAL / Entra ID config (set env vars if you want SSO to work)
 app.config["MSAL_CLIENT_ID"] = os.environ.get("MSAL_CLIENT_ID", "")
@@ -296,6 +300,7 @@ def send_reset_email_stub(email: str, reset_url: str):
 def login_user(email: str):
     # Rotate session on login (prevents session fixation)
     session.clear()
+    session.permanent = True
     session["user_email"] = email
     session["session_id"] = str(uuid.uuid4())
 

@@ -30,8 +30,7 @@
     * sudo apt install -y python3-venv
     * python3 -m venv .venv
     * source .venv/bin/activate
-    * pip install Flask Flask-WTF Flask-SQLAlchemy Flask-Limiter Flask-Talisman email-validator itsdangerous pyotp msal
-    * pip install "passlib[argon2]" 
+    * pip install Flask Flask-WTF Flask-SQLAlchemy Flask-Limiter Flask-Talisman email-validator itsdangerous pyotp msal "passlib[argon2]" 
 * And then run:
     * python3 app.py
     * Open web browser and navigate to following URL: 
