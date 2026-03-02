@@ -9,8 +9,8 @@
 
 #### Tech Stack
 * HTML and Python (Flask)
-* HTML hosts pages like Login, MFA, Forgot Passwords etc.
-* Core logic / route is defined in "app.py". 
+* HTML hosts pages like Login, MFA, Forgot Passwords etc
+* Core logic / route is defined in "app.py"
 
 ##### Packages used
 * Flask	--- Core app
@@ -22,7 +22,7 @@
 * pyotp	--- MFA
 * msal	--- Azure SSO
 * passlib[argon2] --- Strong password hashing
-* email-validator --- Proper email validatio
+* email-validator --- Proper email validation
 
 #### To run
 * Clone this repo
@@ -83,5 +83,7 @@
 * Local WAF
 * Captcha 
 
-#### References
-* Google, ChatGPT, Github and Flask documentation. 
+#### References / Sources used
+* Google, ChatGPT, Github and Flask documentation
+* For ChatGPT part:
+    Creds and other sensitive information was not thrown to AI
