@@ -38,7 +38,7 @@
 * Tested on:
     * OS: Kali Linux 2023.4
     * Python Version: Python 3.13.11
-    
+
 #### Safeguards 
 ##### Method (A) - Username / Password
 * Login / Authentication (Client Side)
@@ -84,6 +84,7 @@
     * Behind VPN or Azure CAP to access this portal to reduce attack surface
 * Local WAF
 * Captcha 
+* Package scanning / Pipeline scanning to find CVEs
 
 #### References / Sources used
 * Google, ChatGPT, Github and Flask documentation
