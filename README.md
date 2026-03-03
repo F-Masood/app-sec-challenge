@@ -95,9 +95,23 @@
 #####  Other functionality
 * Beautfiy web
 
-
-
 #### References / Sources used
 * Google, ChatGPT, Github and Flask documentation
 * For ChatGPT part:
     Creds and other sensitive information was not thrown to AI
+
+#### App View / Demo
+
+![PoC](demo/001.png)
+
+![PoC](demo/002.png)
+
+![PoC](demo/003.png)
+
+![PoC](demo/004.png)
+
+![PoC](demo/005.png)
+
+![PoC](demo/006.png)
+
+![PoC](demo/007.png)
